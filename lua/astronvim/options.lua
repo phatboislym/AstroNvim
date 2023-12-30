@@ -1,6 +1,7 @@
 vim.opt.viewoptions:remove "curdir" -- disable saving current directory with views
 vim.opt.shortmess:append { s = true, I = true } -- disable startup message
 vim.opt.backspace:append { "nostop" } -- Don't stop backspace at insert
+-- vim.opt.colorcolumn = '80'
 if vim.fn.has "nvim-0.9" == 1 then
   vim.opt.diffopt:append "linematch:60" -- enable linematch diff algorithm
 end
@@ -28,7 +29,7 @@ local options = astronvim.user_opts("options", {
     number = true, -- Show numberline
     preserveindent = true, -- Preserve indent structure as much as possible
     pumheight = 10, -- Height of the pop up menu
-    relativenumber = true, -- Show relative numberline
+    relativenumber = false, -- Show relative numberline
     scrolloff = 8, -- Number of lines to keep above and below the cursor
     shiftwidth = 2, -- Number of space inserted for indentation
     showmode = false, -- Disable showing modes in command line
@@ -40,7 +41,7 @@ local options = astronvim.user_opts("options", {
     splitbelow = true, -- Splitting a new window below the current one
     splitkeep = vim.fn.has "nvim-0.9" == 1 and "screen" or nil, -- Maintain code view when splitting
     splitright = true, -- Splitting a new window at the right of the current one
-    tabstop = 2, -- Number of space in a tab
+    tabstop = 4, -- Number of space in a tab
     termguicolors = true, -- Enable 24-bit RGB color in the TUI
     timeoutlen = 500, -- Shorten key timeout length a little bit for which-key
     undofile = true, -- Enable persistent undo
